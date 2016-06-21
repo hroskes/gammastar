@@ -1,0 +1,1 @@
+rsync -azvI --progress  --include '*/' --include '*.root' --exclude '*' --prune-empty-dirs hroskes@lxplus.cern.ch:/afs/cern.ch/user/h/hroskes/work/public/test_centralproduction/CMSSW_7_4_16/src/genproductions/bin/JHUGen/gridpacks_gammastar/ .
