@@ -221,7 +221,7 @@ void angularDistributions_spin0_ggH(string cinput, double g1Re=1, double g2Re=0,
     cname_pdf = (coutput + cname_pdf) + ".pdf";
     cname_eps = (coutput + cname_eps) + ".eps";
     cname_png = (coutput + cname_png) + ".png";
-    cname_png = (coutput + cname_png) + ".root";
+    cname_root = (coutput + cname_root) + ".root";
 
     can->SaveAs(cname_pdf.c_str());
     can->SaveAs(cname_eps.c_str());

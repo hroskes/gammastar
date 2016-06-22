@@ -13,7 +13,7 @@ class Sample(object):
     self.markerstyle = markerstyle
     self.tree = ROOT.TChain("SelectedTree")
     for i in range(1, 11):
-      self.tree.Add(os.path.join(self.folder, "cmsgrid_{}.root".format(i)))
+      self.tree.Add(os.path.join("rootfiles", self.folder, "cmsgrid_{}.root".format(i)))
     self.__hists = None
 
   def hists(self, plots):
@@ -31,7 +31,6 @@ class Sample(object):
           h.Fill(plot.getval(self.tree))
         if i%10000 == 0 or i == length:
           print i, "/", length
-          break
 
       self.__hists = hists
 
@@ -47,7 +46,7 @@ samples = [
            Sample("JHUGen_VBF_m750_Zgs", "Z#gamma", ROOT.kGreen+3, 25),
            Sample("JHUGen_VBF_m750_gsgs_nodecay", "#gamma#gamma", 4, 26),
            Sample("JHUGen_VBF_m750_WW", "WW", 6, 27),
-           #Sample("JHUGen_VBF_m750_ZZ", "ZZ", 3, 28),
+           Sample("JHUGen_HJJ_m750_gg_deltaR", "gg", ROOT.kViolet, 28),
           ]
 
 class Plot(object):
